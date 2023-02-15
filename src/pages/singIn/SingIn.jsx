@@ -25,7 +25,7 @@ function SingIn() {
       setIsLoggedIn(true);
       localStorage.setItem("isLoggedIn", true);
       localStorage.setItem("userName", userInfo);
-      navigate("/booksCatalog");
+      navigate("/x-course-task");
     } else if (userInfo.length <= 4) {
       setError(`Символів має бути більше 4`);
     } else if (userInfo.length >= 16) {
@@ -34,7 +34,7 @@ function SingIn() {
   };
 
   if (isLoggedIn) {
-    navigate("/booksCatalog");
+    navigate("/x-course-task");
   } else {
     return (
       <div className="login-block ">
