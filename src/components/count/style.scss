@@ -1,0 +1,62 @@
+.count {
+    display: flex;
+    align-items: center;
+
+}
+
+.count__box {
+    width: 30px;
+    border-radius: 3px;
+}
+
+.count__input {
+    max-width: 100%;
+    padding-top: 4px;
+    background-color: transparent;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.3;
+    border: 1px solid black;
+    border-right: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.count__input::-webkit-inner-spin-button,
+.count__input::-webkit-outer-spin-button {
+    appearance: none;
+}
+
+.count__controls {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    /* row-gap: 9px; */
+}
+
+.count__controls button {
+    height: 50%;
+    border: 1px solid black;
+}
+
+.count__controls button:hover {
+    background-color: rgb(4, 136, 225);
+}
+
+.count__controls button:active {
+    background-color: rgb(6, 114, 186)
+}
+
+.count__up {
+    border-top-right-radius: 5px;
+}
+
+.count__down {
+    border-bottom-right-radius: 5px;
+}
+
+.count__controls img {
+    display: block;
+}

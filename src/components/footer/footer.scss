@@ -1,0 +1,15 @@
+/* ======Header======================== */
+.footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    border-top: 2px solid black;
+    background-color: #cdd1d3;
+
+
+    span {
+        margin: 0 auto;
+    }
+}

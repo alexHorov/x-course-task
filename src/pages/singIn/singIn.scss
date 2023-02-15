@@ -1,0 +1,78 @@
+.login-block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.user-picture {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+    border: 1px solid black;
+    overflow: hidden;
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+
+.loginForm {
+    width: 240px;
+    padding: 20px;
+    text-align: center;
+
+    button {
+        margin-top: 10px;
+        padding: 4px 5px;
+        width: 100%;
+        border-radius: 8px;
+        background: rgba(234, 245, 81, 0.25);
+        border: 1px solid black;
+        cursor: pointer;
+        color: black;
+
+        &:hover {
+            background: rgb(2, 146, 241);
+
+        }
+
+        &:active {
+            background-color: rgb(6, 114, 186);
+            box-shadow: 0 1px #666;
+            transform: translateY(4px);
+        }
+    }
+}
+
+
+.loginFormInput {
+    width: 100%;
+    padding: 4px 5px;
+    border-radius: 8px;
+    border: 1px solid rgb(138, 136, 136);
+    text-align: center;
+
+    &:focus::placeholder {
+        color: transparent;
+    }
+}
+
+@media (max-width: 320px) {
+    .login-block {
+        width: 100%;
+    }
+
+    .user-picture {
+        width: 200px;
+        height: 200px;
+    }
+
+    .loginForm {
+        width: 100%;
+        padding: 8px;
+    }
+}

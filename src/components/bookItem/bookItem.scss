@@ -1,0 +1,80 @@
+.booksCard .title {
+    text-align: center
+}
+
+.booksCard__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    min-height: 450px;
+    background: #fff;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, .25);
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px;
+    border-radius: 15px;
+    // transform: scale(0.9);
+
+    &:hover {
+        box-shadow: 0 4px 25px rgb(2, 146, 241);
+        // transform: scale(1);
+    }
+
+    img {
+        width: 100%;
+        height: 330px;
+        object-fit: fill;
+    }
+
+    @media (max-width: 320px) {
+        width: 220px;
+    }
+}
+
+
+.booksCard__item-title {
+    font-weight: 700;
+    font-size: 18px;
+    padding: 0 20px;
+    margin-top: 20px;
+}
+
+.booksCard__item-author {
+    margin-top: 20px;
+    padding: 0 20px;
+
+    span {
+        font-size: 18px;
+        font-weight: 700
+    }
+}
+
+
+.booksCard__item-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+
+    span {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+}
+
+.viewBook {
+    background: rgba(234, 245, 81, 0.25);
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: 16px;
+    padding: 8px 20px;
+    cursor: pointer;
+    color: black;
+
+    &:hover {
+        background: rgb(2, 146, 241);
+
+    }
+}

@@ -1,23 +1,40 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+.DS_STORE
+node_modules
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+build/
 
-# testing
-/coverage
+.module-cache
+.eslintcache
 
-# production
-/build
+*.log*
+chrome-user-data
+*.sublime-project
+*.sublime-workspace
+.idea
+*.iml
+.vscode
+*.swp
+*.swo
 
-# misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+packages/react-devtools-core/dist
+packages/react-devtools-extensions/chrome/build
+packages/react-devtools-extensions/chrome/*.crx
+packages/react-devtools-extensions/chrome/*.pem
+packages/react-devtools-extensions/firefox/build
+packages/react-devtools-extensions/firefox/*.xpi
+packages/react-devtools-extensions/firefox/*.pem
+packages/react-devtools-extensions/shared/build
+packages/react-devtools-extensions/.tempUserDataDir
+packages/react-devtools-inline/dist
+packages/react-devtools-shell/dist
+packages/react-devtools-timeline/dist
+build/asset-manifest.json
+build/index.html
+build/static/css/main.073c9b0a.css
+build/static/css/main.073c9b0a.css.map
+build/static/js/787.63fe5d92.chunk.js
+build/static/js/787.63fe5d92.chunk.js.map
+build/static/js/main.9527fba2.js
+build/static/js/main.9527fba2.js.LICENSE.txt
+build/static/js/main.9527fba2.js.map
+build/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg

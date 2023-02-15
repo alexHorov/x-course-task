@@ -1,0 +1,121 @@
+/* =========================section Search ================================= */
+
+
+.booksCard {
+    .input__field {
+        display: grid;
+        grid-template-columns: 1fr 4fr 8fr;
+        column-gap: 15px;
+        align-items: center;
+
+        @media (max-width: 1024px) {
+            grid-template-columns: 1fr
+        }
+    }
+
+    #searchSection {
+        grid-column-start: 2;
+        position: relative;
+        width: 100%;
+        display: flex;
+
+        @media (max-width: 1024px) {
+            grid-column-start: 1;
+            align-items: center;
+            padding-left: 25px;
+        }
+
+        input {
+            height: 40px;
+            width: 600px;
+            font-size: 18px;
+            transition: .3s ease-in;
+            border: 0 solid rgb(2, 146, 241);
+
+            &:focus {
+                outline: none;
+            }
+
+            &:hover {
+                transition: .1s ease-in;
+                border: 2px solid rgb(2, 146, 241);
+            }
+
+            @media (max-width: 768px) {
+                width: 400px
+            }
+
+            @media (max-width: 576px) {
+                width: 300px;
+            }
+
+            @media (max-width: 576px) {
+                width: 200px;
+            }
+
+
+        }
+    }
+}
+
+
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+
+    @media (max-width: 768px) {
+        width: 50%;
+
+    }
+
+}
+
+#searchTerm {
+    width: 100%;
+    border: 3px solid rgb(2, 146, 241);
+    border-right: none;
+    padding: 5px;
+    height: 40px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: black
+}
+
+.searchButton {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgb(2, 146, 241);
+    background: rgb(2, 146, 241);
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* ==============select====================== */
+.select-form {
+    grid-column-start: 3;
+
+    @media (max-width: 1024px) {
+        grid-column-start: 1;
+
+    }
+
+}
+
+#select-price {
+    height: 40px;
+    font-size: 18px;
+    padding: 5px 20px;
+    border: 2px solid rgb(2, 146, 241);
+    border-radius: 5px;
+    margin: 10px 0 10px 10px;
+
+    @media (max-width: 1024px) {
+        margin-left: 25px;
+
+    }
+
+}
