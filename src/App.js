@@ -62,12 +62,12 @@ function App() {
               <Protected isLoggedIn={isLoggedIn}>
                 <Cart />
               </Protected>} />
-            <Route path="booksCatalog" element={
+            <Route path="x-course-task" element={
               <Protected isLoggedIn={isLoggedIn}>
                 <BooksCatalog />
               </Protected>
             } />
-            <Route path="booksCatalog/:idBook" element={
+            <Route path="x-course-task/:idBook" element={
               <Protected isLoggedIn={isLoggedIn}>
                 <SingleBook />
               </Protected>

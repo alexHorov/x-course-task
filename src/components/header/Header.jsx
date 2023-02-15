@@ -24,7 +24,7 @@ function Header() {
   return (
     <div className="header">
       <div className="header__left-block">
-        <CustomLink to="booksCatalog">
+        <CustomLink to="x-course-task">
           <h2>X-course task/Horovyi Oleksandr</h2>
         </CustomLink>
       </div>
