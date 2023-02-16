@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
 import { UserProvider } from 'hooks/useUserInfo';
 import { getAllBooks } from 'api.js';
 import { ScrollToTop } from 'services/scrollToTop';
@@ -52,7 +52,7 @@ function App() {
         setCartStore: (p) => setCartStore(p),
       }}
     >
-      <BrowserRouter>
+      <HashRouter>
         <ScrollToTop />
 
         <Routes>
@@ -75,7 +75,7 @@ function App() {
             <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </UserProvider>
 
 
