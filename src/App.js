@@ -27,12 +27,11 @@ function App() {
 
   useEffect(() => {
 
-    getAllBooks().then((data) => {
-      setBooksCatalog(data.books);
-    });
-    // setIsLoggedIn(auth);
-    // setUserName(newUser);
-    // setCartStore(order);
+    // getAllBooks().then((data) => {
+    //   setBooksCatalog(data.books);
+    // });
+    setBooksCatalog(getAllBooks.books)
+
 
   }, []);
 
