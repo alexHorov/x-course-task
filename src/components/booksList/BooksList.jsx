@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useUserInfo } from "hooks/useUserInfo";
 import { Book } from "../bookItem/BookItem";
-// import { CustomLink } from "../customLink/CustomLink";
+
 import "./booksList.scss";
 
 function BooksList(props) {

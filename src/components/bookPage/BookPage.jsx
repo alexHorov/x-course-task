@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useUserInfo } from "hooks/useUserInfo";
-// import { Count } from "components/count/Count";
 import notFountImage from "assets/imageNotFound.png";
 import countUp from "assets/count-up.svg";
 import countDown from "assets/count-down.svg";
@@ -27,6 +26,10 @@ function BookPage({ book }) {
   const handleValue = (e) => {
     console.log(+e.target.value);
     setQuantity(+e.target.value);
+  };
+
+  const totalPrice = (count, prise) => {
+    return (+price * +quantity).toFixed(2);
   };
 
   const addToCart = (e) => {
@@ -74,19 +77,21 @@ function BookPage({ book }) {
         <div className="book__info-price">
           <div className="book__price-price">
             <h3>Price, $</h3>
-            <p id="price">{price}</p>
+            <p id="price" data-testid="priceContainer">
+              {price}
+            </p>
           </div>
           <div className="book__info-count">
             <h3>Count</h3>
             <div className="count">
               <div className="count__box">
                 <input
+                  data-testid="counter"
                   type="number"
                   className="count__input"
                   min={min}
                   max={max}
                   value={quantity}
-                  data-testId="counter"
                   onChange={handleValue}
                 />
               </div>
@@ -94,7 +99,7 @@ function BookPage({ book }) {
                 <button
                   type="button"
                   className="count__up"
-                  data-testId="increment"
+                  data-testid="increment"
                   onClick={() => incQuantity()}
                 >
                   <img src={countUp} alt="Increase" />
@@ -102,7 +107,7 @@ function BookPage({ book }) {
                 <button
                   type="button"
                   className="count__down"
-                  data-testId="decrement"
+                  data-testid="decrement"
                   onClick={(e) => decQuantity(e)}
                 >
                   <img src={countDown} alt="Decrease" />
@@ -112,7 +117,7 @@ function BookPage({ book }) {
           </div>
           <div className="book__price--total-price">
             <h3>Total price</h3>
-            <p id="sum">{(price * quantity).toFixed(2)}</p>
+            <p id="sum">{totalPrice(price, quantity)}</p>
           </div>
           <div className="cart-button">
             <button id={id} className="addToCart" onClick={addToCart}>

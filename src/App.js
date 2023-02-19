@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { UserProvider } from 'hooks/useUserInfo';
 import { getAllBooks } from 'api.js';
 import { ScrollToTop } from 'services/scrollToTop';
@@ -26,12 +26,14 @@ function App() {
   // console.log(auth);
 
   useEffect(() => {
+    setBooksCatalog(getAllBooks.books)
 
     // getAllBooks().then((data) => {
     //   setBooksCatalog(data.books);
     // });
-    setBooksCatalog(getAllBooks.books)
-
+    // setIsLoggedIn(auth);
+    // setUserName(newUser);
+    // setCartStore(order);
 
   }, []);
 
@@ -51,7 +53,7 @@ function App() {
         setCartStore: (p) => setCartStore(p),
       }}
     >
-      <HashRouter>
+      <BrowserRouter>
         <ScrollToTop />
 
         <Routes>
@@ -74,7 +76,7 @@ function App() {
             <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </UserProvider>
 
 

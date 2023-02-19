@@ -11,7 +11,6 @@ export function Count({ count, incQuantity, decQuantity, id, changeValue }) {
           onChange={(e) => {
             changeValue(id, +e.target.value);
           }}
-          data-testid="counter"
           type="number"
           className="count__input"
           min="1"
@@ -23,7 +22,6 @@ export function Count({ count, incQuantity, decQuantity, id, changeValue }) {
         <button
           type="button"
           className="count__up"
-          data-testid="increment"
           onClick={() => {
             incQuantity(id);
           }}
@@ -33,7 +31,6 @@ export function Count({ count, incQuantity, decQuantity, id, changeValue }) {
         <button
           type="button"
           className="count__down"
-          data-testid="decrement"
           onClick={() => {
             decQuantity(id);
           }}

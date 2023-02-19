@@ -41,7 +41,6 @@ function BooksCatalog() {
             value={filterValues}
             onChange={(e) => setFilterValues(e.target.value)}
           >
-            <option value="All">Price</option>
             <option value="All">All</option>
             <option value="15">less than 15$</option>
             <option value="30">less than 30$</option>
